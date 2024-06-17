@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>SEO ROI Calculator</h1>
+        <form id="roiForm">
+            <div class="input-group">
+                <label for="monthlySpend">Monthly SEO Spend ($):</label>
+                <input type="number" id="monthlySpend" required>
+            </div>
+            <div class="input-group">
+                <label for="monthsPaid">Months Paid For:</label>
+                <input type="number" id="monthsPaid" required>
+            </div>
+            <div class="input-group">
+                <label for="extraTraffic">Extra Monthly Search Traffic Generated:</label>
+                <input type="number" id="extraTraffic" required>
+            </div>
+            <div class="input-group">
+                <label for="conversionRate">Average Conversion Rate (%):</label>
+                <input type="number" step="0.01" id="conversionRate" required>
+            </div>
+            <div class="input-group">
+                <label for="averageOrderValue">Average Order Value ($):</label>
+                <input type="number" id="averageOrderValue" required>
+            </div>
+            <button type="button" id="calculateBtn">Calculate ROI</button>
+        </form>
+        <div id="results" class="results">
+            <h2>Results</h2>
+            <p>Conversions: <span id="conversions"></span></p>
+            <p>Net Additional Monthly Revenue: $<span id="monthlyRevenue"></span></p>
+            <p>Monthly ROI: <span id="monthlyROI"></span>%</p>
+            <p>Total SEO Spend To Date: $<span id="totalSpend"></span></p>
+            <p>Total Additional Revenue Generated To Date: $<span id="totalRevenue"></span></p>
+            <p>Total SEO ROI: <span id="totalROI"></span>%</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
